@@ -217,27 +217,7 @@ E(S)&=\frac{1}{N}E\{(Y^T-\hat{\Lambda}^{(t+1)} X^T)(Y^T-\hat{\Lambda}^{(t+1)} X^
 \end{aligned}
 $$
 
-Hence, we can know the updated parameters as follows:
 
-$$
-\begin{aligned}
-&\begin{cases}
-\hat{\Lambda}^{(t+1)}=Y^TE(x)[E(X^TX)]^{-1}\\
-\hat{\Phi}^{(t+1)}=\frac{1}{N}[Y^TY-2\hat{\Lambda}^{(t+1)}E(X)^TY+hat{\Lambda}^{(t+1)} E(X^TX){\hat{\Lambda}^{(t+1)}}^T]
-\end{cases}\\
-&\text{Since the following conclusion:}\\
-\\
-&\begin{cases}
-E(X\mid Y, \Lambda,\Phi)=Y(\Lambda\Lambda^T+\Phi)^{-1}\Lambda\\
-E(X^TX)=\sum_{i}^{N}\{(Var(X_i)+E(X_i)E(X_i)^T\}=n(I-\Lambda^T(\Lambda\Lambda^{-1}+\Phi)^{-1}\Lambda)-E(X\mid Y, \Lambda,\Phi)^TE(X\mid Y, \Lambda,\Phi)
-\end{cases}\\
-\Rightarrow\\
-&\begin{cases}
-\hat{\Lambda}^{(t+1)}=Y^TY(\Lambda^{(t)}{\Lambda^{(t)}}^T+\Phi^{(t)})^{-1}\Lambda^{(t)}[n(I-{\Lambda^{(t)}}^T(\Lambda^{(t)}{\Lambda^{(t)}}^{-1}+\Phi^{(t)})^{-1}\Lambda^{(t)})-{\Lambda^{(t)}}^T(\Lambda^{(t)}{\Lambda^{(t)}}^T+\Phi^{(t)})^{-1}Y^TY(\Lambda^{(t)}{\Lambda^{(t)}}^T+\Phi^{(t)})^{-1}\Lambda^{(t)}]^{-1}\\
-\hat{\Phi}^{(t+1)}=\frac{1}{N}\{Y^TY-2\hat{\Lambda}^{(t+1)}{\Lambda^{(t)}}^T(\Lambda^{(t)}{\Lambda^{(t)}}^T+\Phi^{(t)})^{-1}Y^TY+\hat{\Lambda}^{(t+1)} [n(I-{\Lambda^{(t)}}^T(\Lambda^{(t)}{\Lambda^{(t)}}^{-1}+\Phi^{(t)})^{-1}\Lambda^{(t)})-{\Lambda^{(t)}}^T(\Lambda^{(t)}{\Lambda^{(t)}}^T+\Phi^{(t)})^{-1}Y^TY(\Lambda^{(t)}{\Lambda^{(t)}}^T+\Phi^{(t)})^{-1}\Lambda^{(t)}]{\hat{\Lambda}^{(t+1)}}^T\}
-\end{cases}\\
-\end{aligned}
-$$
 
 According this algorithm, I can have the the code shown as follows:
 
