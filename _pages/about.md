@@ -23,6 +23,15 @@ Between 2022 and 2023, I actively participated in several high-stakes mathematic
 
 In the spring of 2023, I made the pivotal decision to embrace statistics as my major, a choice that led me to the esteemed Department of Statistics at the University of Michigan in 2024. With a heart brimming with enthusiasm and a mind eager to innovate, I am excited to contribute my unique ideas and passion to the field, aiming to make a significant impact in the vast and evolving world of statistics.
 
+Research Interest
+======
+I believe there is not the best method in statistics, we can explore and explain different types of data by different appropriate statistical methods. Statistical methodology is like a kind of art. Finding a way to explain the story behind the data elegantly is like a masterpiece. Statistical inference is an important way to explore the structure and the meaning of data.
+
+1. Statistical Inference.
+1. High Dimensional Analysis.
+1. Network Analysis.
+1. Statistical Learning.
+
 About me
 ======
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
