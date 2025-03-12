@@ -16,17 +16,10 @@ $$
 
 And we have the following assumption as follows:
 
--   $
-    X_i\sim N_k(0,I_k) 
-    $
+-   $X_i\sim N_k(0,I_k) $
 
--   $
-    \epsilon_i\sim N_p(0,\Phi) \ \ \ \text{where } \Phi=diag[\Phi_1,\Phi_2,\ldots,\Phi_p]
-    $
-
--   $
-    X_i\perp \epsilon_j \ \text{for any } x,y.
-    $
+-   $\epsilon_i\sim N_p(0,\Phi) \ \ \ \text{where } \Phi=diag[\Phi_1,\Phi_2,\ldots,\Phi_p]  
+-   $X_i\perp \epsilon_j \ \text{for any } x,y.$
 
 And we can have the joint distribution as follows:
 $$
