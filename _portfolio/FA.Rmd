@@ -1,1 +1,6 @@
-
+---
+title: "EM Algorithm in Factor Analysis"
+author: "Your Name"
+date: "`r Sys.Date()`"
+output: html_document
+---
