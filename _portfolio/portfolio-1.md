@@ -22,6 +22,7 @@ And we have the following assumption as follows:
 -   $X_i\perp \epsilon_j \ \text{for any } x,y.$
 
 And we can have the joint distribution as follows:
+
 $$
 \begin{bmatrix}
 X\\
@@ -36,6 +37,7 @@ I&\Lambda^T\\
 \Lambda&\Lambda\Lambda^T+\Phi\\
 \end{bmatrix})
 $$
+
 
 According to the joint distribution, we can get the marginal
 distribution and conditional distribution as follows:
