@@ -6,10 +6,10 @@ collection: portfolio
 
 <style>
   body {
-      font-size: 14px;  /* 调整字体大小 */
+      font-size: 18px;  /* 调整字体大小 */
   }
   .post-content, .page-content {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.5;
   }
 </style>
