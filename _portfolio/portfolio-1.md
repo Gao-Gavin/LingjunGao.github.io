@@ -4,25 +4,20 @@ excerpt: "Try to using the low dimensional vector to represent the original data
 collection: portfolio
 ---
 
-.math-inline {
-    font-size: 14px; /* 调整行内公式大小 */
-}
-.math-display {
-    font-size: 16px; /* 调整独立公式大小 */
-}
+
 
 In the context of the high dimension data, we always want to find some low dimensional vector to represent the original high dimension data.
 ## Factor Analysis Model
 
-Suppose we need to use the low dimensional vector to represent the
+<p><span class="small-text">Suppose we need to use the low dimensional vector to represent the
 original data, the original data $Y$ is not centralized yet. Such
-representation follows the following expression:
+representation follows the following expression:</span></p>
 
 $$
 Y_i^{*}=\mu+\Lambda X_i+\epsilon_i
 $$
 
-And we can have the joint distribution as follows:
+<p><span class="small-text">And we can have the joint distribution as follows:</span></p>
 
 $$
 \begin{bmatrix}
@@ -44,8 +39,8 @@ $$
 
 ## EM algorithm to solve the $\Lambda$ and $\Phi$
 
-However, we can not solve the $\Lambda$ directly since $\Lambda$ is not
-identifiable. So we may use the EM algorithm to solve this problem.
+<p><span class="small-text">However, we can not solve the $\Lambda$ directly since $\Lambda$ is not
+identifiable. So we may use the EM algorithm to solve this problem.</span></p>
 
 $$
 P(Y\mid X, \Lambda, \Phi)=\frac{P(X\mid Y, \Phi, \Lambda)P(Y\mid \Lambda, \Phi)}{P(X\mid \Lambda, \, \Phi)} \Rightarrow P(Y\mid \Lambda, \Phi)=\frac{P(Y\mid X, \Lambda, \Phi)P(X)}{P(X\mid Y, \Phi, \Lambda)}
