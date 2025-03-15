@@ -14,6 +14,10 @@ collection: portfolio
   }
 </style>
 
+.content-wrapper {
+    font-size: 14px;
+}
+
 In the context of the high dimension data, we always want to find some low dimensional vector to represent the original high dimension data.
 ## Factor Analysis Model
 
