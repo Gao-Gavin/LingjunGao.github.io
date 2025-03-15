@@ -223,6 +223,49 @@ $$
 According this algorithm, I can have the the code shown as follows:
 
 ```{r}
+FA_generalized=function(Y,K=2,sigma,epsilon = 1e-3,max_iter=200){
+    #set.seed(601)
+    n=dim(Y)[1]
+    p=dim(Y)[2]
 
+    lambda=matrix(rnorm(p*K,0,sigma),nrow=p,ncol=K)
+    phi=diag(rnorm(p,0,1))
+
+    loss=c()
+    
+    original=matrix(c(rep(1,4),numeric(3),numeric(3),rep(1,4)),nrow=7,ncol=2)%*%t(matrix(c(rep(1,4),numeric(3),numeric(3),rep(1,4)),nrow=7,ncol=2))
+    new=lambda%*%t(lambda)
+    diff=norm(new-original,type="F")
+    
+    t=0
+
+
+    while(diff>epsilon){
+        t=t+1
+    
+        Varx=diag(1,K)-t(lambda)%*%solve(lambda%*%t(lambda)+phi)%*%lambda
+        Ex=Y%*%solve(lambda%*%t(lambda)+phi)%*%lambda
+        Extx=n*Varx+t(Ex)%*%Ex
+    
+        lambda_new=t(Y)%*%Ex%*%solve(Extx)
+        
+
+        lambda=lambda_new
+    
+        phi_new=diag(diag(1/n*(t(Y)%*%Y-2*t(Y)%*%Ex%*%t(lambda)+lambda%*%Extx%*%t(lambda))))
+        phi=phi_new
+
+        Sigma_y=lambda%*%t(lambda)+phi+epsilon * diag(p) 
+
+        loss<-c(loss,(-n*p/2)*log(2*pi)-(n/2)*log(abs(det(Sigma_y)))-0.5*sum(diag(solve(Sigma_y)%*%t(Y)%*%Y)))
+        new=lambda%*%t(lambda)
+        diff=norm(new-original,type="F")
+        if(t>max_iter){
+          break
+        }
+        }
+    #print(paste("Times of iteration=",i))
+    return(list(lambda=lambda,phi=phi,loss=loss))
+    }
 
 ```
