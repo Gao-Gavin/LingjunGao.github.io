@@ -4,6 +4,16 @@ excerpt: "Try to using the low dimensional vector to represent the original data
 collection: portfolio
 ---
 
+<style>
+  body {
+      font-size: 14px;  /* 调整字体大小 */
+  }
+  .post-content, .page-content {
+      font-size: 14px;
+      line-height: 1.5;
+  }
+</style>
+
 In the context of the high dimension data, we always want to find some low dimensional vector to represent the original high dimension data.
 ## Factor Analysis Model
 
