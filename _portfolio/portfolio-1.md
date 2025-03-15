@@ -4,15 +4,7 @@ excerpt: "Try to using the low dimensional vector to represent the original data
 collection: portfolio
 ---
 
-<style>
-  body {
-      font-size: 18px;  /* 调整字体大小 */
-  }
-  .post-content, .page-content {
-      font-size: 16px;
-      line-height: 1.5;
-  }
-</style>
+
 
 .content-wrapper {
     font-size: 14px;
