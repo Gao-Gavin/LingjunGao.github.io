@@ -1,6 +1,6 @@
 ---
 title: "Dimension Reduction Project"
-excerpt: "Try to using the low dimensional vector to represent the original data and explain the structure behind the data<br/>" <img src='/images/PCA.png'>
+excerpt: "Try to using the low dimensional vector to represent the original data and explain the structure behind the data<br/><img src='/images/PCA.png'>" 
 collection: portfolio
 ---
 
