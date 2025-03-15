@@ -3,5 +3,54 @@ title: "Portfolio item number 2"
 excerpt: "Short description of portfolio item number 2 <br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
+## What is Regression Analysis?
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+Regression analysis is a statistical method used to model the relationship between a dependent variable \( Y \) and one or more independent variables \( X \).
+
+### **1. Simple Linear Regression**
+In a simple linear regression model, the relationship between \( X \) and \( Y \) is given by:
+
+\[
+Y = \beta_0 + \beta_1 X + \epsilon
+\]
+
+where:
+- \( Y \) is the dependent variable (response),
+- \( X \) is the independent variable (predictor),
+- \( \beta_0 \) is the intercept,
+- \( \beta_1 \) is the slope (coefficient),
+- \( \epsilon \) is the error term.
+
+### **2. Example Dataset**
+Assume we have a dataset:
+
+| X (Hours Studied) | Y (Exam Score) |
+|------------------|--------------|
+| 1 | 50 |
+| 2 | 55 |
+| 3 | 65 |
+| 4 | 70 |
+| 5 | 75 |
+
+### **3. Fitting the Model**
+We estimate \( \beta_0 \) and \( \beta_1 \) using the **least squares method**:
+
+\[
+\hat{\beta}_1 = \frac{\sum (X_i - \bar{X})(Y_i - \bar{Y})}{\sum (X_i - \bar{X})^2}
+\]
+
+\[
+\hat{\beta}_0 = \bar{Y} - \hat{\beta}_1 \bar{X}
+\]
+
+Using these equations, we can fit a line to the data.
+
+### **4. Visualization**
+Below is a plot showing the regression line:
+
+![Regression Plot](/images/regression_plot.png)
+
+### **5. Conclusion**
+Regression is a powerful tool in statistics and machine learning for predicting numerical outcomes. More advanced models include **multiple regression**, **logistic regression**, and **nonlinear regression**.
+
+--- 
