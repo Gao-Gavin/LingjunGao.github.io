@@ -33,75 +33,7 @@ I&\Lambda^T\\
 $$
 
 
-According to the joint distribution, we can get the marginal
-distribution and conditional distribution as follows:
 
--   $
-    Y_i^{*}\sim N_p(\mu,\Lambda\Lambda^T+\Phi)
-    $
-
--   $
-    X_i\mid Y_i^{*}\sim N_k(\Lambda^T(\Lambda\Lambda^T+\Phi)^{-1}(Y_i^{*}-\mu),I-\Lambda^T(\Lambda\Lambda^T+\Phi)^{-1}\Lambda)
-    $
-
-We can know the Expectation about the distribution of $X$ conditional on
-$Y$ as follows:
-
-$$
-\begin{aligned}
-\begin{cases}
-E(X\mid Y, \Lambda,\Phi)=(Y-\mu)(\Lambda\Lambda^T+\Phi)^{-1}\Lambda\\
-E(X^TX)=\sum_{i}^{N}\{(Var(X_i)+E(X_i)E(X_i)^T\}=n(I-\Lambda^T(\Lambda\Lambda^{-1}+\Phi)^{-1}\Lambda)-E(X\mid Y, \Lambda,\Phi)^TE(X\mid Y, \Lambda,\Phi)
-\end{cases}
-\end{aligned}
-$$
-
-### Estimate the Sample Mean by MLE
-
-$$
-f_{Y_i^{*}}(y_i^{*})=(2\pi)^{-\frac{p}{2}}|\Lambda\Lambda^T+\Phi|^{-\frac{1}{2}}\exp{\{-\frac{1}{2}(y_i^{*}-\mu)^T(\Lambda\Lambda^T+\Phi)^{-1}(y_i^{*}-\mu)\}}
-$$
-
-Hence, the sample distribution is
-
-$$
-f_{Y^{*}}(y^{*})=\prod_{i=1}^{N}f_{Y_i^{*}}(y_i^{*})=(2\pi)^{-\frac{Np}{2}}|\Lambda\Lambda^T+\Phi|^{-\frac{N}{2}}\exp{\{-\frac{1}{2}\sum_{i=1}^{N}(y_i^{*}-\mu)^T(\Lambda\Lambda^T+\Phi)^{-1}(y_i^{*}-\mu)\}}
-$$
-
-We can take the log operation to simplify the calculation and maximize
-the Log-Likelihood function. The Log-Likelihood function can be
-expressed as follows:
-
-$$
-\begin{aligned} 
-l(\theta) &= \ln f_{Y^{*}}(y^{*})\\
-&= -\frac{Np}{2} \ln (2\pi) 
-   - \frac{N}{2} \ln \left| \Lambda \Lambda^T + \Phi \right|
-   - \frac{1}{2} \sum_{i=1}^{N} (y_i^{*} - \mu)^T (\Lambda \Lambda^T + \Phi)^{-1} (y_i^{*} - \mu)\\\\
-&= -\frac{Np}{2} \ln (2\pi) 
-   - \frac{N}{2} \ln \left| \Lambda \Lambda^T + \Phi \right|
-   - \frac{1}{2} \sum_{i=1}^{N} \left[ {y_i^{*}}^T (\Lambda \Lambda^T + \Phi)^{-1} y_i^{*} 
-   - 2\mu^T (\Lambda \Lambda^T + \Phi)^{-1} y_i^{*} 
-   + \mu^T (\Lambda \Lambda^T + \Phi)^{-1} \mu \right]
-\end{aligned}
-$$
-
-According to the MLE method we can derive the as follow:
-
-$$
-\frac{\partial}{\partial \mu} l(\mu) = 0 
-\Rightarrow
--\sum_{i=1}^{N} (\Lambda \Lambda^T + \Phi)^{-1} y_i^{*}
-+ N (\Lambda \Lambda^T + \Phi)^{-1} \mu = 0
-\Rightarrow
-\hat{\mu} = \frac{\sum_{i=1}^{N} y_i^{*}}{N} = \bar{y^{*}}
-$$
-
-In this case we can centralize the data as the following expression:
-
-$$
-Y\leftarrow Y^{*}-\bar{Y^{*}}
-$$
 
 ## EM algorithm to solve the $\Lambda$ and $\Phi$
 
