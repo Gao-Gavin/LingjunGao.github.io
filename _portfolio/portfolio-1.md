@@ -1,9 +1,10 @@
 ---
-title: "EM alogorithm in Factor Analysis"
+title: "Dimension Reduction Project"
 excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>" 
 collection: portfolio
 ---
 
+In the context of the high dimension data, we always want to find some low dimensional vector to represent the original high dimension data.
 ## Factor Analysis Model
 
 Suppose we need to use the low dimensional vector to represent the
